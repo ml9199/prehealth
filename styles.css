@@ -1,0 +1,558 @@
+/* ── Base ── */
+div, header, nav, main, footer, section, article, form, table, input, select, textarea, button, img {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f0f7f5;
+  color: #1a2e2a;
+  font-family: "DM Sans", "Helvetica Neue", sans-serif;
+}
+
+/* ── Container ── */
+#container {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 72em;
+  margin: auto;
+  row-gap: 0;
+}
+
+header, nav, footer {
+  grid-column: 1;
+}
+
+
+h2 {
+  font-size: 1.4em;
+  color: #0d4a3a;
+  margin-top: 0;
+}
+
+h3 {
+  color: #145c48;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.7;
+  color: #2c4a42;
+}
+
+/* ── Header ── */
+header {
+  background-color: #0d4a3a;
+  color: #ffffff;
+  padding: 1em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.6em;
+  color: #ffffff;
+}
+
+header h1 a:link,
+header h1 a:visited {
+  color: #ffffff !important;
+  text-decoration: none;
+  text-transform: none;
+}
+
+header h1 a:hover {
+  background-color: transparent;
+  color: #a8d8cc !important;
+}
+
+/* ── Nav — stretched full width ── */
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  background-color: #145c48;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+nav > a {
+  flex: 1;
+  text-align: center;
+  padding: 0.85em 0;
+  font-size: 0.95em;
+  letter-spacing: 0.03em;
+  color: #d4ede7;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav > a:last-child {
+  border-right: none;
+}
+
+nav > a:hover {
+  background-color: #0d4a3a;
+  color: #ffffff;
+}
+
+nav > a:active {
+  background-color: #09332a;
+  color: #a8d8cc;
+}
+
+/* override global a rules for nav */
+nav > a:link,
+nav > a:visited {
+  color: #d4ede7;
+  background-color: transparent;
+}
+
+/* ── Main grid ── */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+  padding: 1.5em 2em;
+  background-color: #f0f7f5;
+}
+
+/* ── Interactive panel ── */
+.interactive-panel {
+  grid-column: 1 / -1;
+  padding: 1.5em 1.75em;
+  background-color: #e0f2ec;
+  border: 1.5px solid #9dcfc3;
+  border-radius: 10px;
+}
+
+.interactive-panel h1,
+.interactive-panel h2 {
+  color: #0d4a3a;
+  margin-top: 0;
+}
+
+.interactive-panel p {
+  color: #1e4038;
+}
+
+.interactive-btn,
+.color-mode-button {
+  font-size: 0.95em;
+  padding: 0.6em 1.2em;
+  margin-right: 0.5em;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  background-color: #0d4a3a;
+  color: #ffffff;
+  transition: background-color 0.2s ease;
+}
+
+.interactive-btn:hover,
+.color-mode-button:hover {
+  background-color: #145c48;
+}
+
+.interactive-btn a:link,
+.interactive-btn a:visited {
+  color: #ffffff;
+  text-transform: none;
+  background-color: transparent;
+}
+
+.interactive-btn a:hover,
+.interactive-btn a:active {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+
+/* ── Seasons sections — stretched full width ── */
+.seasons {
+  grid-column: 1 / -1;
+  background-color: #ffffff;
+  border: 1px solid #b8ddd6;
+  border-radius: 10px;
+  padding: 1.5em 1.75em;
+  box-shadow: 0 1px 4px rgba(13, 74, 58, 0.06);
+}
+
+.seasons h2 {
+  border-left: 4px solid #1d9e75;
+  padding-left: 0.6em;
+  margin-bottom: 0.75em;
+}
+
+/* ── Tables inside seasons ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  margin-top: 0.5em;
+}
+
+thead tr {
+  background-color: #0d4a3a;
+  color: #ffffff;
+}
+
+thead th {
+  padding: 0.6em 0.8em;
+  text-align: left;
+  font-weight: normal;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #eaf5f1;
+}
+
+tbody td {
+  padding: 0.55em 0.8em;
+  border-bottom: 1px solid #cce8e1;
+  color: #1a2e2a;
+}
+
+input[type="checkbox"] {
+  accent-color: #0d4a3a;
+  width: 1.1em;
+  height: 1.1em;
+  cursor: pointer;
+}
+
+/* ── Interview cards ── */
+.int-cards {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  margin-top: 0.75em;
+}
+
+.int-card {
+  flex: 1;
+  min-width: 200px;
+  background-color: #eaf5f1;
+  border: 1px solid #9dcfc3;
+  border-radius: 8px;
+  padding: 1em 1.25em;
+}
+
+.int-card h3 {
+  margin-top: 0;
+  color: #0d4a3a;
+}
+
+/* ── MCAT grid card ── */
+.mcat-grid {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  margin-top: 0.75em;
+}
+
+.mcat-card {
+  flex: 1;
+  min-width: 220px;
+}
+
+/* ── Media section ── */
+.media-section {
+  grid-column: 1 / -1;
+  background-color: #ffffff;
+  border: 1px solid #b8ddd6;
+  border-radius: 10px;
+  padding: 1.5em 1.75em;
+  margin-top: 0;
+  box-shadow: 0 1px 4px rgba(13, 74, 58, 0.06);
+}
+
+.media-section h2 {
+  color: #0d4a3a;
+  border-left: 4px solid #1d9e75;
+  padding-left: 0.6em;
+  margin-top: 0;
+}
+
+video, audio {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  border-radius: 6px;
+  background-color: #eaf5f1;
+  margin-top: 0.5em;
+}
+
+/* ── Images ── */
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 6px;
+}
+
+/* ── Global link states ── */
+a:link, a:visited {
+  color: #0d4a3a;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+h1 > a:link, h1 > a:visited {
+  text-transform: none;
+}
+
+a:hover {
+  background-color: #0d4a3a;
+  color: white;
+}
+
+a:active {
+  background-color: #09332a;
+  color: white;
+}
+
+/* ── Form page layout ── */
+.media-page main,
+.form-page main {
+  display: block;
+  padding: 1.5em 2em;
+}
+
+/* ── Form styling ── */
+form {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+
+label {
+  font-weight: bold;
+  color: #0d4a3a;
+}
+
+select,
+textarea,
+input[type="file"],
+input[type="submit"] {
+  font-size: 1em;
+  padding: 0.5em;
+  border-radius: 4px;
+  border: 1px solid #9dcfc3;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #0d4a3a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #145c48;
+  color: white;
+}
+
+/* ── Article (submit page) ── */
+article {
+  background-color: #ffffff;
+  border: 1px solid #b8ddd6;
+  border-radius: 10px;
+  padding: 1.5em 1.75em;
+  box-shadow: 0 1px 4px rgba(13, 74, 58, 0.06);
+}
+
+article > p {
+  font-size: 1.05em;
+  margin-top: 0;
+  color: #2c4a42;
+}
+
+/* ── Tip text ── */
+p.tip {
+  background-color: #e0f2ec;
+  border-left: 4px solid #1d9e75;
+  padding: 0.6em 0.9em;
+  border-radius: 4px;
+  font-size: 0.95em;
+  color: #0d4a3a;
+}
+
+/* ── Footer ── */
+footer {
+  background-color: #0d4a3a;
+  color: #a8d8cc;
+  text-align: center;
+  padding: 1em 2em;
+  font-size: 0.9em;
+}
+
+footer p {
+  margin: 0;
+  color: #a8d8cc;
+}
+
+/* ── Highlight toggle ── */
+.title-highlight {
+  background-color: #a8d8cc;
+  padding: 0.25em;
+  border-bottom: 4px solid #0d4a3a;
+}
+
+/* ── Color mode button ── */
+.color-mode-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  background-color: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #ffffff;
+}
+
+.color-mode-button:hover {
+  background-color: rgba(255,255,255,0.25) !important;
+}
+
+.color-mode-button img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(10);
+}
+
+/* ── Light mode ── */
+body.light-mode {
+  background-color: #f0f7f5;
+  color: #1a2e2a;
+}
+
+/* ── Dark mode ── */
+body.dark-mode {
+  background-color: #0f1f1c;
+  color: #d4ede7;
+}
+
+body.dark-mode main {
+  background-color: #0f1f1c;
+}
+
+body.dark-mode .seasons,
+body.dark-mode .media-section,
+body.dark-mode article {
+  background-color: #162e28;
+  border-color: #2a5046;
+}
+
+body.dark-mode .seasons h2,
+body.dark-mode .media-section h2 {
+  color: #a8d8cc;
+}
+
+body.dark-mode p {
+  color: #b8d8d0;
+}
+
+body.dark-mode .interactive-panel {
+  background-color: #1a3d34;
+  border-color: #2a5046;
+  color: #d4ede7;
+}
+
+body.dark-mode .interactive-panel h1,
+body.dark-mode .interactive-panel h2 {
+  color: #a8d8cc;
+}
+
+body.dark-mode .interactive-btn,
+body.dark-mode .color-mode-button {
+  background-color: #a8d8cc;
+  color: #0d4a3a;
+}
+
+body.dark-mode a:link,
+body.dark-mode a:visited {
+  color: #a8d8cc;
+}
+
+body.dark-mode a:hover {
+  background-color: #a8d8cc;
+  color: #0d4a3a;
+}
+
+body.dark-mode table thead tr {
+  background-color: #1d9e75;
+}
+
+body.dark-mode tbody tr:nth-child(even) {
+  background-color: #1a3d34;
+}
+
+body.dark-mode tbody td {
+  color: #d4ede7;
+  border-color: #2a5046;
+}
+
+body.dark-mode .int-card {
+  background-color: #1a3d34;
+  border-color: #2a5046;
+}
+
+body.dark-mode p.tip {
+  background-color: #1a3d34;
+  color: #a8d8cc;
+}
+
+body.dark-mode footer {
+  background-color: #091a16;
+}
+
+/* ── Responsive: 30em ── */
+@media (min-width: 30em) {
+  nav {
+    flex-direction: row;
+  }
+}
+
+/* ── Responsive: 45em — two columns, seasons still full width ── */
+@media (min-width: 45em) {
+  #container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  header, nav, footer {
+    grid-column: 1 / span 2;
+  }
+
+  main {
+    grid-column: 1 / span 2;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .interactive-panel,
+  .media-section {
+    grid-column: 1 / -1;
+  }
+
+  .seasons {
+    grid-column: auto;
+  }
+
+  video, audio {
+    max-width: 90%;
+  }
+
+  nav {
+    justify-content: stretch;
+  }
+}

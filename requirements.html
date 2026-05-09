@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Health - Requirements</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="img/png" href="images/earth.png">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+
+
+
+  <body>
+    <div id="container">
+      <header>
+        <h1><a href="index.html">The Prehealth Track</a></h1>
+        <button id="color-mode-button" class="color-mode-button">
+          <img src="images/color-mode.svg" alt="color-mode-button">
+          <span id="color-mode-label">Dark Mode</span>
+        </button>
+      </header>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="requirements.html">Requirements</a>
+        <a href="admissions.html">Med School</a>
+        <a href="submit.html" >Thoughts?</a>
+      </nav>
+
+      <main>
+        <section class="interactive-panel">
+          <h2>Course Requirements</h2>
+          <p>Every prerequisite you need before applying to medical school, organized by subject. Use the check boxes below to see if you have meet all the requirements! - Plan ahead</p>
+          <button class="interactive-btn"><a href="#biology">Biology</a></button>
+
+          <button class="interactive-btn"><a href="#chemistry">Chemistry</a></button>
+
+          <button class="interactive-btn"><a href="#physics">Physics</a></button>
+
+          <button class="interactive-btn"><a href="#psychology">Psychology</a></button>
+
+          <button class="interactive-btn"><a href="#mcat">MCAT</a></button>
+
+        </section>
+
+        <section class="seasons" id="biology">
+          <h2>Biology</h2>
+          <p>Two semesters of biology with lab are required by most medical schools.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Done</th>
+                <th>Course</th>
+                <th>Credits</th>
+                <th>When</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" class="req-check" aria-label="Biology I"></td>
+                <td>Biology I</td>
+                <td>4 cr</td>
+                <td>Freshman Fall</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="req-check" aria-label="Biology II"></td>
+                <td>Biology II</td>
+                <td>4 cr</td>
+                <td>Freshman Spring</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="req-check" aria-label="Genetics"></td>
+                <td>Genetics</td>
+                <td>3 cr</td>
+                <td>Sophomore</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        
+        <section class="seasons" id="chemistry">
+          <h2>Chemistry</h2>
+          <p>General chemistry, organic chemistry, and biochemistry are all required.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Done</th>
+                <th>Course</th>
+                <th>Credits</th>
+                <th>When</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" class="req-check" aria-label="General Chemistry I"></td>
+                <td>General Chemistry I</td>
+                <td>4 cr</td>
+                <td>Freshman Fall</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="req-check" aria-label="General Chemistry II"></td>
+                <td>General Chemistry II</td>
+                <td>4 cr</td>
+                <td>Freshman Spring</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="req-check" aria-label="Organic Chemistry I"></td>
+                <td>Organic Chemistry I</td>
+                <td>3 cr</td>
+                <td>Sophomore Fall</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="req-check" aria-label="Organic Chemistry II"></td>
+                <td>Organic Chemistry II</td>
+                <td>3 cr</td>
+                <td>Sophomore Spring</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="req-check" aria-label="Biochemistry"></td>
+                <td>Biochemistry</td>
+                <td>3 cr</td>
+                <td>Junior</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="seasons" id="physics">
+          <h2>Physics</h2>
+          <p>Two semesters of physics with lab. Check your target schools for algebra-based vs. calculus-based requirements.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Done</th>
+                <th>Course</th>
+                <th>Credits</th>
+                <th>When</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" class="req-check" aria-label="Physics I"></td>
+                <td>Physics I</td>
+                <td>4 cr</td>
+                <td>Sophomore</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="req-check" aria-label="Physics II"></td>
+                <td>Physics II</td>
+                <td>4 cr</td>
+                <td>Junior</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="seasons" id="math">
+          <h2>Math &amp; Statistics</h2>
+          <p>Statistics is emphasized on the MCAT. Many schools also require calculus.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Done</th>
+                <th>Course</th>
+                <th>Credits</th>
+                <th>When</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" class="req-check" aria-label="Calculus"></td>
+                <td>Calculus I</td>
+                <td>3 cr</td>
+                <td>Freshman</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="req-check" aria-label="Statistics"></td>
+                <td>Statistics</td>
+                <td>3 cr</td>
+                <td>Sophomore</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="seasons" id="psychology">
+          <h2>Psychology &amp; Sociology</h2>
+          <p>The MCAT's Psych/Socio section makes these courses standard prerequisites at most schools.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Done</th>
+                <th>Course</th>
+                <th>Credits</th>
+                <th>When</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" class="req-check" aria-label="Intro Psychology"></td>
+                <td>Intro to Psychology</td>
+                <td>3 cr</td>
+                <td>Any year</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="req-check" aria-label="Intro Sociology"></td>
+                <td>Intro to Sociology</td>
+                <td>3 cr</td>
+                <td>Any year</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        
+        <section class="seasons" id="mcat">
+          <a href="https://www.hunter.cuny.edu/students/opportunities/pre-professional-programs/pre-health/course-requirements/medical-school/"><h2>For Selected Med School</h2></a>
+          <div class="mcat-grid">
+            <div class="mcat-card">
+              <img srcset="images/meds.jpg 1x, images/meds2x.jpg 2x" style="max-width: 100%; height: auto;" width="375" height="250" alt="Medical students studying together in a library">
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; 2026 For pre-health students.</p>
+      </footer>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

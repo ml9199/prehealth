@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Thoughts?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="img/png" href="images/earth.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="form-page">
+    <div id="container">
+      <header>
+        <h1><a href="index.html">The Prehealth Track</a></h1>
+        <button id="color-mode-button" class="color-mode-button">
+          <img src="images/color-mode.svg" alt="color-mode-button">
+          <span id="color-mode-label">Dark Mode</span>
+        </button>
+      </header>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="requirements.html">Requirements</a>
+        <a href="admissions.html">Med School</a>
+        <a href="submit.html" >Thoughts?</a>
+      </nav>
+
+      <main>
+        <article>
+          <h1>Share Your Thoughts!</h1>
+          <p>We’d love to know what are your comments, questions or concerns. Tell us!</p>
+
+          <form action="https://formspree.io/f/xldaered" method="POST" enctype="multipart/form-data"> 
+            <label for="season">Which section do you find most helpful?</label><br>
+            <select id="season" name="season" required>
+              <option value="">-- Choose one --</option>
+              <option value="Abstract">Overview</option>
+              <option value="Mechanism">Requirements</option>
+              <option value="Discussion">Med School</option>
+            </select><br><br>
+
+            <label for="reason">Any comments?</label><br>
+            <textarea id="reason" name="reason" rows="5" cols="40" placeholder="Write a few sentences..." required></textarea><br><br>
+            <input type="submit" value="Send">
+          </form>
+        </article>
+      </main>
+
+      <footer>
+        <p>&copy; 2026 For pre-health students.</p>
+      </footer>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
